@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sketchat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body style="">
+    <div id="header">
+      <nav id="navbar" class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="./" style="font-size: 32px; font-weight: bold; text-shadow: 2px 2px #CCC; padding-left: 0px;">Sketchat</a>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+	    <li><a href="" data-loc="home" class="menu-list">Room ID:</a></li>
+	  </ul>
+	</div><!-- /.navbar-collapse -->
+      </nav>
+    </div>
+
+    <section class="scroll-panel">
+      <div class="jumbotron jumbotron-midnight text-centered">
+	<video id="localVideo"></video>
+	<div id="remotes"></div>
+      </div>
+    </section>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="./simplewebrtc/socket.io.js"></script>
+    <script src="./simplewebrtc/simplewebrtc.bundle.js"></script>
+    <script src="./simplewebrtc/main.js"></script>
+
+  </body>
+</html>
+
+

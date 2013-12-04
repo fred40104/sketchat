@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- saved from url=(0050)http://getbootstrap.com/examples/starter-template/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sketchat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+  </head>
+
+  <body style="">
+    <div id="header">
+      <nav id="navbar" class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="./" style="font-size: 32px; font-weight: bold; text-shadow: 2px 2px #CCC; padding-left: 0px;">Sketchat</a>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+	    <li><a href="./#home" data-loc="home" class="menu-list">Home</a></li>
+	    <li><a href="./#about" data-loc="about" class="menu-list">About</a></li>
+	    <li><a href="./#team" data-loc="team" class="menu-list">Team</a></li>
+	  </ul>
+	</div><!-- /.navbar-collapse -->
+      </nav>
+    </div>
+
+    <div class="container">
+
+      <section class="scroll-panel">
+	<div class="jumbotron jumbotron-midnight text-centered">
+	  <div id="row">
+
+	    <div class="showcase-item col-md-6 col-md-offset-3">
+	      <div class="showcase-sign">
+		<h2>Enter the chatroom</h2>
+		<p>Enter the chatroom name and Sketchat friends.</p>
+		  <div class="col-md-6 col-md-offset-3">
+		    <!--form action="./enter_room.php" method="get"-->
+		      <input type="text" id="enter-name" class="form-control sign-form" name="enter-name" placeholder="Name" />
+		      <input type="text" id="enter-room" class="form-control sign-form" name="enter-room" placeholder="Chat Room Name" />
+		      <button id="enter-button" class="btn btn-lg btn-primary btn-embossed sign-button">Enter</button>
+		    <!--/form-->
+		  </div>
+	      </div>
+	    </div>
+
+	    <!--div class="showcase-item col-md-6">
+	      <div class="showcase-item-box">
+		<h2>Create a chatroom</h2>
+		<p>Create your chatroom and start to Sketchat!</p>
+		  <div class="col-md-6 col-md-offset-3">
+		    <form action="./create_room.php" method="get">
+		      <input type="text" id="create-name" class="form-control sign-form" name="create-name" placeholder="Name" />
+		      <input type="text" id="create-room" class="form-control sign-form" name="create-room" placeholder="Chat Room Name" />
+		      <button id="create-button" class="btn btn-lg btn-primary btn-embossed sign-button">Create</button>
+		    </form>
+		  </div>
+	      </div>
+	    </div-->
+
+	  </div>
+	</div>
+      </section>
+
+    </div>
+
+    <footer>
+      <div class="container">
+	<div class="text-centered">
+	    <p>&copy; 2013 Sketchat &nbsp;All rights reserved.</p>
+	</div>
+      </div>
+    </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.scrollto.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <script>
+      (function ($) {
+	$("#enter-button").on("click", function() {
+	  var room = document.getElementById("enter-room").value;
+	  location.href = "./chatroom.html?" + room;
+	});
+      }(jQuery));
+    </script>
+  </body>
+</html>
+

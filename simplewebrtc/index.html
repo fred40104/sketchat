@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>SimpleWebRTC Demo</title>
+      <link rel="stylesheet" href="./css/layout.css" />
+      <link rel="stylesheet" href="./css/base.css" />
+      <link rel="stylesheet" href="./css/main.css" />
+    </head>
+    <body>
+        <div class="background"></div>
+        <div id="container" class='row full'>
+            <div id="leftcolumn" class='col g-4'>
+                <h1 id="title">Start a room</h1>
+                <p id="subTitle"></p>
+                <form id="createRoom">
+                    <input type='text' id="sessionInput"/>
+                    <button type="submit" style='float: right; margin: 0 50px 0 0;'>Create it!</button>
+                </form>
+                <video id="localVideo" class='g-11'></video>
+                <div id="remotes"></div>
+            </div>
+            <div id="rightcolumn" class='col g-8'>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="socket.io.js"></script>
+        <script src="simplewebrtc.bundle.js"></script>
+        <script src="main.js"></script>
+        
+    </body>
+</html>
+
+        
