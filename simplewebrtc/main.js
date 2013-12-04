@@ -1,5 +1,3 @@
-
-
 // grab the room from the URL
 var room = location.search && location.search.split('?')[1];
 
@@ -16,10 +14,10 @@ var webrtc = new SimpleWebRTC({
     autoAdjustMic: false
 });
 
-console.log(webrtc);
 
 // when it's ready, join if we got a room from the URL
 webrtc.on('readyToCall', function () {
+  console.log("fownfnwefnnfowfiwenf");
   // you can name it anything
   if (room) webrtc.joinRoom(room);
 });

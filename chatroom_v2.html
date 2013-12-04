@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Sketchat</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="./gridster/jquery.gridster.css">
+    <link rel="stylesheet" type="text/css" href="./gridster/demo.css">
+    <link rel="stylesheet" type="text/css" href="./gridster/size.css">
+
+    <style> video { width: 100%; height: 100%; } </style>
+  </head>
+
+  <body style="">
+    <div id="header">
+      <nav id="navbar" class="navbar navbar-default" role="navigation">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<div class="navbar-header">
+	  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	    <span class="sr-only">Toggle navigation</span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	    <span class="icon-bar"></span>
+	  </button>
+	  <a class="navbar-brand" href="./" style="font-size: 32px; font-weight: bold; text-shadow: 2px 2px #CCC; padding-left: 0px;">Sketchat</a>
+	</div>
+	<!-- Collect the nav links, forms, and other content for toggling -->
+
+	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	  <ul class="nav navbar-nav navbar-right">
+	    <li><a href="" data-loc="home" class="menu-list"></a></li>
+	  </ul>
+	</div><!-- /.navbar-collapse -->
+      </nav>
+    </div>
+
+    <section style="padding-top: 55px;">
+      <div class="gridster ready">
+	<ul id="remotes">
+	  <li data-row="1" data-col="1" data-sizex="3" data-sizey="4" class="gs-w"><video id="localVideo"></video></li>
+	</ul>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+	<div class="text-centered">
+	    <p>&copy; 2013 Sketchat &nbsp;All rights reserved.</p>
+	</div>
+      </div>
+    </footer>
+      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+      <script src="./simplewebrtc/socket.io.js"></script>
+      <script src="./simplewebrtc/simplewebrtc.bundle.js"></script>
+      <script src="./simplewebrtc/main.js"></script>
+
+      <!--script src="./gridster/jquery.js"></script-->
+      <script src="./gridster/jquery.gridster.js"></script>
+
+      <script type="text/javascript">
+	var gridster;
+
+	$(function(){
+
+	  gridster = $(".gridster ul").gridster({
+	    widget_base_dimensions: [100, 55],
+		   widget_margins: [5, 5],
+		   helper: 'clone',
+		   resize: {
+		     enabled: true
+		   }
+	  }).data('gridster');
+
+
+	  $('.js-resize-random').on('click', function() {
+	    gridster.resize_widget(gridster.$widgets.eq(getRandomInt(0, 9)),
+	      getRandomInt(1, 4), getRandomInt(1, 4))
+	  });
+
+	});
+      </script>
+
+
+  </body></html>
