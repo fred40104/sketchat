@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://gridster.net/demos/resize.html -->
+  <title>Demo &#187; Resize &#187; gridster.js</title>
+  <link rel="stylesheet" type="text/css" href="./jquery.gridster.css">
+  <link rel="stylesheet" type="text/css" href="./demo.css">
+  <link rel="stylesheet" type="text/css" href="./size.css">
+</head>
+
+<body style="">
+
+  <h1>Resize</h1>
+
+  <p>Grab the right or bottom border and drag to the desired width or height.</p>
+
+  <div class="controls">
+      <button class="js-resize-random">Resize random widget</button>
+  </div>
+
+  <div class="gridster ready">
+    <ul style="">
+      <li data-row="1" data-col="13" data-sizex="1" data-sizey="2" class="gs-w player-revert" style="position: absolute; min-width: 100px; min-height: 55px;">0<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="1" data-col="5" data-sizex="1" data-sizey="2" class="gs-w" style="position: absolute;">1<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="2" data-col="2" data-sizex="1" data-sizey="1" class="gs-w" style="position: absolute;">2<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="1" data-col="2" data-sizex="3" data-sizey="1" class="gs-w" style="min-width: 100px; min-height: 55px; position: absolute;">3<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="2" data-col="1" data-sizex="1" data-sizey="1" class="gs-w">4<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="1" data-col="1" data-sizex="1" data-sizey="1" class="gs-w">5<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="3" data-col="2" data-sizex="1" data-sizey="1" class="gs-w">6<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="4" data-col="2" data-sizex="1" data-sizey="1" class="gs-w">7<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="2" data-col="4" data-sizex="1" data-sizey="1" class="gs-w">8<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+      <li data-row="3" data-col="5" data-sizex="1" data-sizey="3" class="gs-w">9<span class="gs-resize-handle gs-resize-handle-x"></span><span class="gs-resize-handle gs-resize-handle-y"></span><span class="gs-resize-handle gs-resize-handle-both"></span></li>
+    </ul>
+  </div>
+
+    <script type="text/javascript" src="./jquery.js"></script>
+    <script src="./jquery.gridster.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript">
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+    </script>
+
+    <script type="text/javascript">
+      var gridster;
+
+      $(function(){
+
+        gridster = $(".gridster ul").gridster({
+          widget_base_dimensions: [100, 55],
+          widget_margins: [5, 5],
+          helper: 'clone',
+          resize: {
+            enabled: true
+          }
+        }).data('gridster');
+
+
+        $('.js-resize-random').on('click', function() {
+            gridster.resize_widget(gridster.$widgets.eq(getRandomInt(0, 9)),
+                getRandomInt(1, 4), getRandomInt(1, 4))
+        });
+
+      });
+    </script>
+
+
+</body></html>
