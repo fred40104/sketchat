@@ -166,13 +166,27 @@
     };
 
     SimpleWebRTC.prototype.handlePeerStreamRemoved = function (peer) {
-      alert("someone has leaved the room");
-      var container = this.getRemoteVideoContainer();
+      console.log("-------------------------------------------------------------");
+      console.log("=====this=====");
+      console.log(this);
+      console.log("=====peer=====");
+      console.log(peer);
+      //alert("someone has leaved the room");
+      
+      //var container = this.getRemoteVideoContainer();
+      var container = true;
+      console.log("=====container=====");
+      console.log(container);
       var videoEl = peer.videoEl;
+      console.log("=====videoEl=====");
+      console.log(videoEl.parentNode.id);
       if (this.config.autoRemoveVideos && container && videoEl) {
-	container.removeChild(videoEl);
+        //gridster.remove_widget( $('.gridster li').eq(3) );
+        gridster.remove_widget($('#' + videoEl.parentNode.id));
+	//container.removeChild(videoEl);
       }
       if (videoEl) this.emit('videoRemoved', videoEl, peer);
+      console.log("-------------------------------------------------------------");
     };
 
     SimpleWebRTC.prototype.getDomId = function (peer) {
@@ -256,12 +270,39 @@
     };
 
     SimpleWebRTC.prototype.getRemoteVideoContainer = function () {
-      //var time = new Date();
-      //time = time.getTime();
-      //var tmp = '<li id="' + time + '"></li>';
-      //gridster.add_widget(tmp, 3, 4, 1, 1);
-      return this.getEl(this.config.remoteVideosEl);
-      //return this.getEl(time);
+      
+      var gridster = $(".gridster ul").gridster({
+	widget_base_dimensions: [100, 55],
+	       widget_margins: [5, 5],
+	       helper: 'clone',
+	       resize: {
+		 enabled: true
+	       }
+      }).data('gridster');
+      var time = new Date();
+      time = time.getTime();
+      time = "r_" + time;
+      var tmp = '<li id="' + time + '"></li>';
+      console.log("----------------from add------------------");
+      console.log($("#" + this.config.remoteVideosEl));
+      var count = parseInt($("#" + this.config.remoteVideosEl)[0].childElementCount); 
+      var x_position;
+      var y_position = (parseInt(count / 4) * 4) + 1;
+      if(count % 4 == 1) {
+	x_position = count * 4;
+      }
+      else if (count % 4 == 2) {
+	x_position = count * 3.5;
+      }
+      else if (count % 4 == 3) {
+	x_position = count * 4;
+      }
+      else {
+	x_position = count * 3;
+      }
+      gridster.add_widget(tmp, 3, 4, x_position, y_position);
+      //return this.getEl(this.config.remoteVideosEl);
+      return this.getEl(time);
     };
 
     SimpleWebRTC.prototype.shareScreen = function (cb) {
