@@ -72,13 +72,13 @@ Make sure that the port is the same as the above js code setting. Also the the p
 
 #Keep going
 
-##Pablo
+###Pablo
 
 * Complete the sign.html, show the notification when inputing the form, or you can use the jumpout modal or just alert
 
 * Combine enter_room.php and create_room.php to one file.
 
-##Andy
+###Andy
 
 * 把畫板裝上去，可以的話debug那個游標和畫筆的位置有落差的問題
 
@@ -88,6 +88,24 @@ Make sure that the port is the same as the above js code setting. Also the the p
 
 * 在結束聊天時ajax紀錄時間到database存起來
 
-##Fred & 洪振維
+###Fred & 洪振維
 
-* 準備期中報告內容
+* 準備期中報告內
+
+###Reference
+
+Use jQuery to implement ajax
+
+	$.ajax({
+	  	url: "cgi.php?argument_key=" + argument_value,
+		type: 'GET',
+		dataType: 'text',
+		success: function(msg) {
+		  //return the result
+		},
+		beforeSend: function(msg) {
+		  //can make some loading effect here
+		}
+	});
+
+
