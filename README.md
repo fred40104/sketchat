@@ -4,8 +4,6 @@ Hey guys, write anything that can help others to know the cool things that you f
 
 Website Demo: [http://wonderbee.no-ip.biz/sketchat/](http://wonderbee.no-ip.biz/sketchat/)
 
-Multi-user video chatroom Demo: [http://wonderbee.no-ip.biz/sketchat/chatroom_demo.html?sketchat](http://wonderbee.no-ip.biz/sketchat/chatroom_demo.html\?sketchat)
-
 #How to implement
 
 ##Gridster 
