@@ -32,63 +32,92 @@
 	    <span class="icon-bar"></span>
 	    <span class="icon-bar"></span>
 	  </button>
-	  <a class="navbar-brand" href="./" style="font-size: 32px; font-weight: bold; text-shadow: 2px 2px #CCC; padding-left: 0px;">Sketchat</a>
+	  <a class="navbar-brand" href="./" style="font-size: 32px; font-weight: bold; padding-left: 0px;">Sketchat</a>
 	</div>
 	<!-- Collect the nav links, forms, and other content for toggling -->
-
-	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	  <ul class="nav navbar-nav navbar-right">
-	    <li><a href="" data-loc="home" class="menu-list"></a></li>
-	  </ul>
+	<div >
+	  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	    <div id='clear'>Clear</div>
+	    <ul class="nav navbar-nav navbar-right">
+	      <li><a href="" data-loc="home" class="menu-list"></a></li>
+	    
+	    </ul>
+	  </div>
 	</div><!-- /.navbar-collapse -->
       </nav>
     </div>
-
-    <section style="padding-top: 55px;">
+    <div id='cursors'>
+    
+    </div>
+    <canvas id='paper' height= "1000" width= "1900">
+    </canvas>
+    <hgroup id="instructions">		
+    	<h1>Draw anywhere!</h1>
+	<h2>You will see everyone else who's doing the same.</h2>
+	<h3>Tip: if the stage gets dirty, simply reload the page</h3>
+	</hgroup>
+    <section id="video-gallery" style='height: 400px; overflow: scroll;'>
+    <section>
       <div class="gridster ready">
 	<ul id="remotes">
 	  <li data-row="1" data-col="1" data-sizex="3" data-sizey="4" class="gs-w"><video id="localVideo"></video></li>
 	</ul>
       </div>
     </section>
-
-    <footer>
-      <div class="container">
-	<div class="text-centered">
-	    <p>&copy; 2013 Sketchat &nbsp;All rights reserved.</p>
-	</div>
+    </section>
+    <!--footer>
+    <div class="container">
+      <div class="text-centered">
+	<p>&copy; 2013 Sketchat &nbsp;All rights reserved.</p>
       </div>
-    </footer>
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
-      <script src="./simplewebrtc/socket.io.js"></script>
-      <script src="./simplewebrtc/simplewebrtc.bundle.js"></script>
-      <script src="./simplewebrtc/main.js"></script>
+    </div>
+    </footer--!>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="./simplewebrtc/socket.io.js"></script>
+    <script src="./simplewebrtc/simplewebrtc.bundle.js"></script>
+    <script src="./simplewebrtc/main.js"></script>
+    <script src='./node-drawing-game/assets/js/script.js'></script>
+    <!--script src="./gridster/jquery.js"></script-->
+    <script src="./gridster/jquery.gridster.js"></script>
 
-      <!--script src="./gridster/jquery.js"></script-->
-      <script src="./gridster/jquery.gridster.js"></script>
+    <script type="text/javascript">
+      var gridster;
 
-      <script type="text/javascript">
-	var gridster;
-
-	$(function(){
+      $(function(){
 
 	  gridster = $(".gridster ul").gridster({
-	    widget_base_dimensions: [100, 55],
-		   widget_margins: [5, 5],
-		   helper: 'clone',
-		   resize: {
-		     enabled: true
-		   }
-	  }).data('gridster');
+	  widget_base_dimensions: [100, 55],
+	  widget_margins: [5, 5],
+	  helper: 'clone',
+	 resize: {
+	enabled: true
+}
+}).data('gridster');
 
 
 	  $('.js-resize-random').on('click', function() {
 	    gridster.resize_widget(gridster.$widgets.eq(getRandomInt(0, 9)),
 	      getRandomInt(1, 4), getRandomInt(1, 4))
-	  });
+	    });
 
-	});
-      </script>
+	  });
+$('#video-gallery').css('position', 'fixed');
+$('#video-gallery').css('top', (screen.height - 370) + 'px');
+$('#video-gallery').css('width', '100%');
+
+$('#clear').on('click', function(){
+    	console.log('clickedddddddddddddddd');
+	
+    	var canvas = $('canvas')[0];
+	var ctx = canvas.getContext('2d');
+    
+    	ctx.setTransform(1, 0, 0, 1, 0, 0);
+	ctx.clearRect(0, 0, canvas.width, canvas.height);
+	ctx.restore();
+
+    });
+
+</script>
 
 
   </body></html>
