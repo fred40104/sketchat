@@ -68,6 +68,19 @@ Run the nodejs socket server
 Make sure that the port is the same as the above js code setting. Also the the port should choose the idle one, so if it failed, maybe the port is busy.
 
 
+##Node Drawing Game
+
+Source webiste: [http://tutorialzine.com/2012/08/nodejs-drawing-game/](http://tutorialzine.com/2012/08/nodejs-drawing-game/)
+
+Compare to above websocket-canvas example, it can let multi user drawing together concurrently, and have indivisual mouse cursor for each user on the same drawing board.
+
+###How to use
+
+The source code has download into our repository, and the related socket setting has been done so it can run directly on our host. Command line to run.
+
+	node app.js
+
+
 #Reference
 
 Use jQuery to implement ajax
