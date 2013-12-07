@@ -4,8 +4,6 @@ Hey guys, write anything that can help others to know the cool things that you f
 
 Website Demo: [http://wonderbee.no-ip.biz/sketchat/](http://wonderbee.no-ip.biz/sketchat/)
 
-Multi-user video chatroom Demo: [http://wonderbee.no-ip.biz/sketchat/chatroom_demo.html?sketchat](http://wonderbee.no-ip.biz/sketchat/chatroom_demo.html\?sketchat)
-
 #How to implement
 
 ##Gridster 
@@ -67,32 +65,10 @@ Run the nodejs socket server
 
 	node server.js
 
-Make sure that the port is the same as the above js code setting. Also the the port should choose the idle one, so if it faild, maybe the port is busy.
+Make sure that the port is the same as the above js code setting. Also the the port should choose the idle one, so if it failed, maybe the port is busy.
 
 
-#Keep going
-
-###Pablo
-
-* Complete the sign.html, show the notification when inputing the form, or you can use the jumpout modal or just alert
-
-* Combine enter_room.php and create_room.php to one file.
-
-###Andy
-
-* 把畫板裝上去，可以的話debug那個游標和畫筆的位置有落差的問題
-
-* 可以的話畫板至少加個橡皮擦
-
-* chatroom.html版面畫板加上去你看要怎麼排，然後可以的話做一下螢幕response，例如我現在是一排四個固定，但如果螢幕較大的話要可以大一點或是怎
-
-* 在結束聊天時ajax紀錄時間到database存起來
-
-###Fred & 洪振維
-
-* 準備期中報告內
-
-###Reference
+#Reference
 
 Use jQuery to implement ajax
 
