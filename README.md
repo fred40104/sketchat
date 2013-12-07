@@ -76,6 +76,10 @@ Compare to above websocket-canvas example, it can let multi user drawing togethe
 
 ###How to use
 
+Resonably require the socket.io node module, also need to install module node-static
+
+	npm install node-static
+
 The source code has download into our repository, and the related socket setting has been done so it can run directly on our host. Command line to run.
 
 	node app.js
