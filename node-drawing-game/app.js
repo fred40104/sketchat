@@ -1,5 +1,7 @@
 // Including libraries
 
+var port = 1234;
+
 var app = require('http').createServer(handler),
     io = require('socket.io').listen(app),
     static = require('node-static'); // for serving files
@@ -10,7 +12,7 @@ var fileServer = new static.Server('./');
 
 // This is the port for our web server.
 // you will need to go to http://localhost:8080 to see it
-app.listen(1111);
+app.listen(port);
 
 // If the URL of the socket server is opened in a browser
 function handler (request, response) {
