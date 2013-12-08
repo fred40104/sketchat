@@ -17,7 +17,7 @@ body {
   color: #FFF;
 }
 #enter {
-  font-size: 28px;
+  font-size: 24px;
   margin: 10px 0px 30px 0px;;
 
 }
@@ -29,15 +29,26 @@ body {
   font-size: 18px;
 }
 
+.slogon {
+  margin-top: -10px; 
+  font-size: 18px; 
+  letter-spacing: 3px; 
+  word-spacing: 3px;
+}
+
 @media(max-width: 767px) {
   #enter {
     font-size: 18px;
+  }
+  .sologn {
+    font-size: 8px;
   }
   #youtube {
     width: 100%;
     height: 180px;
   }
 }
+
 
 .scroll-panel {
   padding-top: 78px;
@@ -80,7 +91,7 @@ body {
 }
 .showcase-item .showcase-item-box-member {
   /*background-color: #7F8C8D;*/
-  background-color: #DDD;
+  background-color: none;
   color: #555;
   padding: 40px;
   height: 100%;
@@ -99,7 +110,7 @@ body {
 .no-margin { margin: 0; }
 
 footer {
-  padding: 40px 0px 20px 0px;
+  padding: 60px 0px 20px 0px;
   font-size: 18px;
   color: #555;
 }
