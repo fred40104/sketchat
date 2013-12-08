@@ -7,7 +7,7 @@ $(function(){
 	}
 
 	// The URL of your web server (the port is set in app.js)
-	var url = 'http://59.127.174.192:8080';
+	var url = 'http://59.127.174.192:1234';
 
 	var doc = $(document),
 		win = $(window),
