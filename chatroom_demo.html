@@ -49,13 +49,15 @@
     <div id='cursors'>
     
     </div>
-    <canvas id='paper' height= "1000" width= "1900">
-    </canvas>
+     	<div id='draw' style='position: relative; top: 55px;'>
+    		<canvas id='paper' height= "1000" width= "1900">
+    		</canvas>
+     	</div>
     <hgroup id="instructions">		
     	<h1>Draw anywhere!</h1>
 	<h2>You will see everyone else who's doing the same.</h2>
 	<h3>Tip: if the stage gets dirty, simply reload the page</h3>
-	</hgroup>
+    </hgroup>
     <section id="video-gallery" style='height: 400px; overflow: scroll;'>
     <section>
       <div class="gridster ready">
@@ -102,22 +104,29 @@
 
 	  });
 $('#video-gallery').css('position', 'fixed');
-$('#video-gallery').css('top', (screen.height - 370) + 'px');
+$('#video-gallery').css('top', (screen.height - 400) + 'px');
 $('#video-gallery').css('width', '100%');
 
 $('#clear').on('click', function(){
-    	console.log('clickedddddddddddddddd');
-	
-    	var canvas = $('canvas')[0];
-	var ctx = canvas.getContext('2d');
     
-    	ctx.setTransform(1, 0, 0, 1, 0, 0);
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-	ctx.restore();
+    if($('#video-gallery').css('top') == (screen.height - 400)+'px'){
+    	$('#video-gallery').animate({top: screen.height+'px'});
+    }else{
+	$('#video-gallery').animate({top: (screen.height - 400)+'px'})		
+    }
+
+    var canvas = $('canvas')[0];
+    var ctx = canvas.getContext('2d');
+    /*canvas.width  = window.innerWidth;
+    canvas.height  = window.innerHeight;
+    console.log(canvas.width+' '+canvas.height);*/
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.restore();
 
     });
 
-</script>
+  </script>
 
 
   </body></html>
