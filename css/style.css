@@ -1,5 +1,9 @@
+*{
+  margin:0;
+  padding:0;
+}
 body {
-  background-color: #34495E;
+  background: url('../node-drawing-game/assets/img/bg.png') repeat #e4e4e4; 
   color: #1ABC9C;
 }
 
@@ -98,4 +102,37 @@ footer {
 .sign-button {
   margin-top: 30px;
 }
+
+hgroup{
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 400px;
+  height: 78px;
+  top: 30%;
+  left: 50%;
+  margin: -120px 0 0 -225px;
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px rgba(100, 100, 100, 0.1), 0 3px 1px #D4D4D4;
+  color: #555;
+}
+hgroup>h1{
+  font-size: 22px;
+  padding-bottom: 8px;
+}
+
+hgroup>h2{
+  font-size: 13px;
+  font-weight: normal;
+  padding-bottom: 8px;
+}
+
+hgroup>h3{
+  font-size: 12px;
+  font-weight: normal;
+  font-style: italic;
+  color: #999;
+}
+
 

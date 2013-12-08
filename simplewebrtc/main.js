@@ -17,7 +17,6 @@ var webrtc = new SimpleWebRTC({
 
 // when it's ready, join if we got a room from the URL
 webrtc.on('readyToCall', function () {
-  console.log("fownfnwefnnfowfiwenf");
   // you can name it anything
   if (room) webrtc.joinRoom(room);
 });

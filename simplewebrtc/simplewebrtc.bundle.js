@@ -267,11 +267,11 @@
       } else {
 	return;
       }
+
     };
 
     SimpleWebRTC.prototype.getRemoteVideoContainer = function () {
-      
-      var gridster = $(".gridster ul").gridster({
+     var gridster = $(".gridster ul").gridster({
 	widget_base_dimensions: [100, 55],
 	       widget_margins: [5, 5],
 	       helper: 'clone',
@@ -284,6 +284,7 @@
       time = "r_" + time;
       var tmp = '<li id="' + time + '"></li>';
       console.log("----------------from add------------------");
+
       console.log($("#" + this.config.remoteVideosEl));
       var count = parseInt($("#" + this.config.remoteVideosEl)[0].childElementCount); 
       var x_position;
@@ -299,6 +300,7 @@
       }
       else {
 	x_position = count * 3;
+      
       }
       gridster.add_widget(tmp, 3, 4, x_position, y_position);
       //return this.getEl(this.config.remoteVideosEl);
@@ -856,7 +858,7 @@
 
       WildEmitter.call(this);
 
-      // log events in debug mode
+     // log events in debug mode
       if (this.config.debug) {
 	this.on('*', function (event, val1, val2) {
 	  var logger;
