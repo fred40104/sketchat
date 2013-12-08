@@ -13,6 +13,8 @@ body {
   width: 100%;
   padding: 0 20px;
   border-radius: 0;
+  background-color: #333;
+  color: #FFF;
 }
 #enter {
   font-size: 28px;
@@ -47,12 +49,14 @@ body {
 .jumbotron {
   border-radius: 0 !important;
   padding: 0 !important;
+  background-color: none;
 }
 
 .jumbotron-midnight {
   z-index:10;
-  background-color: #34495E;
-  color: #1ABC9C;
+  background-color: none;
+ /* color: #1ABC9C;*/
+  color: #555;
   margin: 0;
 }
 #home {
@@ -65,23 +69,26 @@ body {
   padding: 2px;
 }
 .showcase-item .showcase-item-box {
-  background-color: #34495E;
-  color: #FFFFFF;
+  /*background-color: #34495E;*/
+  background-color: none;
+  /*color: #1ABC9C;*/
+  color: #555;
   padding: 40px;
   height: 100%;
   width: 100%;
   text-align: center;
 }
 .showcase-item .showcase-item-box-member {
-  background-color: #7F8C8D;
-  color: #FFFFFF;
+  /*background-color: #7F8C8D;*/
+  background-color: #DDD;
+  color: #555;
   padding: 40px;
   height: 100%;
   width: 100%;
   text-align: center;
 }
 .showcase-item .showcase-sign {
-  color: #1ABC9C;
+  color: #555;
   padding: 40px;
   height: 100%;
   width: 100%;
@@ -94,6 +101,7 @@ body {
 footer {
   padding: 40px 0px 20px 0px;
   font-size: 18px;
+  color: #555;
 }
 
 .sign-form {

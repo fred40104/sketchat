@@ -4684,40 +4684,47 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-default .navbar-brand {
-  color: #777777;
+  /*color: #777777;*/
+  color: #FFF;
 }
 
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
-  color: #5e5e5e;
+  /*color: #5e5e5e;*/
+  color: #FFF;
   background-color: transparent;
 }
 
 .navbar-default .navbar-text {
-  color: #777777;
+  /*color: #777777;*/
+  color: #FFF;
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: #777777;
+  /*color: #777777;*/
+  color: #FFF;
 }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #333333;
+  /*color: #333333;*/
+  color: #FFF;
   background-color: transparent;
 }
 
 .navbar-default .navbar-nav > .active > a,
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
-  color: #555555;
+  /*color: #555555;*/
+  color: #FFF;
   background-color: #e7e7e7;
 }
 
 .navbar-default .navbar-nav > .disabled > a,
 .navbar-default .navbar-nav > .disabled > a:hover,
 .navbar-default .navbar-nav > .disabled > a:focus {
-  color: #cccccc;
+  /*color: #cccccc;*/
+  color: #FFF;
   background-color: transparent;
 }
 
@@ -4748,7 +4755,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
-  color: #555555;
+  /*color: #555555;*/
+  color: #FFF;
   background-color: #e7e7e7;
 }
 
@@ -4766,33 +4774,39 @@ textarea.input-group-sm > .input-group-btn > .btn {
 
 @media (max-width: 767px) {
   .navbar-default .navbar-nav .open .dropdown-menu > li > a {
-    color: #777777;
+    /*color: #777777;*/
+  color: #FFF;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #333333;
+    /*color: #333333;*/
+  color: #FFF;
     background-color: transparent;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #555555;
+    /*color: #555555;*/
+  color: #FFF;
     background-color: #e7e7e7;
   }
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
-    color: #cccccc;
+    /*color: #cccccc;*/
+  color: #FFF;
     background-color: transparent;
   }
 }
 
 .navbar-default .navbar-link {
-  color: #777777;
+  /*color: #777777;*/
+  color: #FFF;
 }
 
 .navbar-default .navbar-link:hover {
-  color: #333333;
+  /*color: #333333;*/
+  color: #FFF;
 }
 
 .navbar-inverse {
@@ -4801,21 +4815,25 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-brand {
-  color: #999999;
+  /*color: #999999;*/
+  color: #FFF;
 }
 
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
-  color: #ffffff;
+  /*color: #ffffff;*/
+  color: #FFF;
   background-color: transparent;
 }
 
 .navbar-inverse .navbar-text {
-  color: #999999;
+  /*color: #999999;*/
+  color: #FFF;
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  /*color: #999999;*/
+  color: #FFF;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -5231,7 +5249,8 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
+  /*background-color: #eeeeee;*/
+  background-color: none;
 }
 
 .jumbotron h1 {
